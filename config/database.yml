@@ -8,7 +8,7 @@
 #   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
 # On Windows:
 #   gem install pg
-#       Choose the win32 build.
+#       Choose the win32 build.config/database.yml
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: simbidion
+  password: pguser
 
 development:
   <<: *default
